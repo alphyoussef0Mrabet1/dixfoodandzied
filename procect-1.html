@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="per-haede">
+    <img src="/img/pop.avif" alt="">
+    <div class="container">
+      <input class="myinput-link" placeholder="Site.com" />
+    
+        <span class="tooltip">COPY</span>
+      </span>
+    </div>
+    
+    <a href="/cart.html" class="view-cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+    
+    </div>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+      </div>
+      <i class="fa-solid fa-map-pin"></i>
+    </div>
+    
+    <div class="cart" hidden>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div>
+          <strong>Total: dt<span id="total">0</span> dt</strong>
+      </div>
+    </div>
+    
+    <div class="scrolling-wrapper">
+      <div class="card-nav"><i class="fa-solid fa-map"></i><h2>Ramassage en magasin </h2></div>
+      <div class="card-nav"><i class="fa-solid fa-truck-fast"></i><h2>Livraison gratuite</h2></div>
+      <div class="card-nav"><i class="fa-solid fa-cart-shopping"></i><h2>Partenaires</h2></div>
+    </div>
+    
+    <div class="products-page">
+        <div class="card pro-card">
+            <img src="/img/iron.jpg" alt="Card Image">
+            <div class="content">
+                <h3>Card Title 1</h3>
+                <p>الكرياتين هذا ما يحكيلكش برشا… يعطيك القوة ويرجعلك العزيمة في أقل وقت وبأحسن سعر عند Popeye’s. قوتك تبدأ من هنا</p>
+                <hr class="hr-card">
+                <div class="product">
+                    <select  style="width: 100PX;" id="weight-select-1" onchange="updatePrice('weight-select-1', 'price-1')">
+                        <option value="250g" data-price="50">250g - 50DT</option>
+                        <option value="500g" data-price="70">500g - 70DT</option>
+                    </select>
+                    <button onclick="addToCart('Product 1', getSelectedPrice('weight-select-1'), getSelectedWeight('weight-select-1'))">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+   
+
+
+    </div>
+    
+
+        <section class="footer">
+            <div class="footer-row">
+              <div class="footer-col">
+                <h4>Info</h4>
+                <ul class="links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Compressions</a></li>
+                  <li><a href="#">Customers</a></li>
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Collection</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="links">
+                  <li><a href="#">Free Designs</a></li>
+                  <li><a href="#">Latest Designs</a></li>
+                  <li><a href="#">Themes</a></li>
+                  <li><a href="#">Popular Designs</a></li>
+                  <li><a href="#">Art Skills</a></li>
+                  <li><a href="#">New Uploads</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="links">
+                  <li><a href="#">Customer Agreement</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">GDPR</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Media Kit</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                  Subscribe to our newsletter for a weekly dose
+                  of news, updates, helpful tips, and
+                  exclusive offers.
+                </p>
+                <form action="#">
+                  <input type="text" placeholder="Your email" required>
+                  <button type="submit">SUBSCRIBE</button>
+                </form>
+                <div class="icons">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+          </div>
+          </section>
+          
+          
+          
+          <script src="index.js"></script>
+          
+          </body>
+          </html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="per-haede">
+    <img src="/img/pop.avif" alt="">
+    <div class="container">
+      <input class="myinput-link" placeholder="Site.com" />
+    
+        <span class="tooltip">COPY</span>
+      </span>
+    </div>
+    
+    <a href="/cart.html" class="view-cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+    
+    </div>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+      </div>
+      <i class="fa-solid fa-map-pin"></i>
+    </div>
+    
+    <div class="cart" hidden>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div>
+          <strong>Total: dt<span id="total">0</span> dt</strong>
+      </div>
+    </div>
+    
+    <div class="scrolling-wrapper">
+      <div class="card-nav"><i class="fa-solid fa-map"></i><h2>Ramassage en magasin </h2></div>
+      <div class="card-nav"><i class="fa-solid fa-truck-fast"></i><h2>Livraison gratuite</h2></div>
+      <div class="card-nav"><i class="fa-solid fa-cart-shopping"></i><h2>Partenaires</h2></div>
+    </div>
+    
+    
+        <div class="title-container">
+          <h1 class="styled-title">products</h1>
+          <hr class="styled-hr">
+        </div>
+
+
+        
+    <div class="card-container">
+
+
+
+    
+
+
+
+          
+
+      <div class="card">
+        <img src="/img/NITRO-TECH-WHEY-GOLD-NEW-STOCK-X-NUTRITION-TUNISIA.png" alt="Card Image">
+        <div class="content">
+            <h3>NITRO TECH WHEY GOLD – 2,3KG</h3>
+        <P>Peptides de protéine de lactosérum plus 100% de lactosérum isolé et concentré</P>
+            <hr class="hr-card">
+            <div class="product">
+                <select  style="width: 100PX;" id="NITRO TECH WHEY " onchange="updatePrice('NITRO TECH WHEY ', 'price-1')">
+                    <option value="2,3kg" data-price="270">2,3kg - 270DT</option>
+                </select>
+                <button onclick="addToCart('NITRO TECH WHEY GOLD – 2,3KG', getSelectedPrice('NITRO TECH WHEY '), getSelectedWeight('NITRO TECH WHEY '))">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="card">
+      <img src="/img/Iron-Mass-2Kg-Chocolat.webp" alt="Card Image">
+      <div class="content">
+          <h3>IRONLAB Mass Gainer | 3KG</h3>
+          <p>IRONLAB MASS Gainer est un mélange de la plus haute qualité de protéines.</p>
+          <hr class="hr-card">
+          <div class="product">
+              <select  style="width: 100PX;" id="Mass" onchange="updatePrice('Mass', 'price-1')">
+                  <option value="fraise" data-price="130,000">fraise-130 dt</option>
+                  <option value="Chocolat" data-price="130,000">Chocolat-130 dt</option>
+                  <option value="Vanilla" data-price="130,000">Vanilla-130 dt</option>
+              </select>
+              <button onclick="addToCart('Product 1', getSelectedPrice('Mass'), getSelectedWeight('Mass'))">
+                  <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="card">
+    <img src="/img/Iron-whey-Blend-Chocolat.webp" alt="Card Image">
+    <div class="content">
+        <h3>IRONLAB Whey Blend | 2KG </h3>
+        <p>IRONLAB WHEY BLEND EST un mélange de la plus haute qualité de protéines. </p>
+        <hr class="hr-card">
+        <div class="product">
+            <select  style="width: 100PX;" id="Whey" onchange="updatePrice('Whey', 'price-1')">
+                <option value="fraise-190,000" data-price="190,000">fraise-190 dt</option>
+                <option value="Chocola-190,000" data-price="190,000">Chocolat-190 dt</option>
+                <option value="Vanilla-190,000" data-price="190,00">Vanilla-190 dt</option>
+            </select>
+            <button onclick="addToCart('Whey', getSelectedPrice('Whey'), getSelectedWeight('Whey'))">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+  <img src="/img/Iron-whey-Blend-Chocolat.webp" alt="Card Image">
+  <div class="content">
+      <h3>IRONLAB Whey Blend | 1KG </h3>
+      <p>IRONLAB WHEY BLEND EST un mélange de la plus haute qualité de protéines. </p>
+      <hr class="hr-card">
+      <div class="product">
+          <select  style="width: 100PX;" id="Whey" onchange="updatePrice('Whey', 'price-1')">
+              <option value="fraise-110,000" data-price="110,000">fraise- 110 dt</option>
+              <option value="Chocola-110,000" data-price="110,000">Chocolat- 110 dt</option>
+              <option value="Vanilla-110,000" data-price="110,00">Vanilla- 110 dt</option>
+          </select>
+          <button onclick="addToCart('Whey', getSelectedPrice('Whey'), getSelectedWeight('Whey'))">
+              <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+      </div>
+  </div>
+</div>
+    
+
+
+
+<section class="footer">
+  <div class="footer-row">
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul class="links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Compressions</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Collection</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul class="links">
+        <li><a href="#">Free Designs</a></li>
+        <li><a href="#">Latest Designs</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Popular Designs</a></li>
+        <li><a href="#">Art Skills</a></li>
+        <li><a href="#">New Uploads</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul class="links">
+        <li><a href="#">Customer Agreement</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">GDPR</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Media Kit</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+      <form action="#">
+        <input type="text" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </div>
+</div>
+</section>
+
+
+
+<script src="index.js"></script>
+
+</body>
+</html>
